@@ -1,0 +1,36 @@
+<html>
+    
+    <head>
+        
+        <title>EMAIL VALIDATION</title>
+        
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        Email: <input type="email" id="email" placeholder="Enter your email." required onblur="emailValidate()" />
+        <p id="infoMail"></p>
+        
+        Reenter Email: <input type="email" placeholder="Re-enter your email." required />
+        
+        
+        <script>
+            function emailValidate(){
+                document.write("hi");
+                var email=document.getElementById("email").value;
+                
+                if(email === ""){
+                    document.getElementById("infoMail").innerHTML="Please eneter your email";
+                } 
+                
+               else if(email.match( [a-b]*[0-9]*){
+                     document.getElementById("infoMail").innerHTML=" your email";
+                }
+                else{
+                     document.getElementById("infoMail").innerHTML="Your email should contain alphanumeric, @ and . spl chars.";
+                }
+            }
+        </script>
+        
+    </body>
+</html>
+        

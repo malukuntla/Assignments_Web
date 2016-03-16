@@ -1,0 +1,99 @@
+	<!--<body>
+		<table >
+				<tr>
+				<td> <input type="checkbox" value="Photography"  class="checkbox" onclick="clickedCheckbox()">Photography</td>
+				<td> <input type="checkbox" value="Entertainment" class="checkbox" onclick="clickedCheckbox()">Entertainment</td>
+				<td> <input type="checkbox" value="Shopping" class="checkbox" onclick="clickedCheckbox()">Shopping</td>
+				<td> <input type="checkbox" value="Cooking" class="checkbox" onclick="clickedCheckbox()">Cooking</td>
+				<td> <input type="checkbox" value="Travelling" class="checkbox" onclick="clickedCheckbox()">Travelling</td>
+				</tr>
+			</table>
+			
+			
+			<script>
+				function clickedCheckbox(){
+					var checkedValue=document.getElementsByClassName("checkbox");
+					var checkedArray=[];
+					
+					for(var i=0;i<checkedValue.length;i++){
+						if(checkedValue[i].checked===true){
+							checkedArray=checkedValue[i].value;
+							console.log(checkedArray +",");
+							 
+						}
+						
+						
+					int count=0;
+					
+						for(checkedArray[i] === document.getElementsByClassName().value){
+							checkedArray
+						}
+						
+					}
+		
+	            }
+			
+			
+			</script>
+	</body> -->
+			
+			
+		<body>
+		<table >
+				<tr>
+				<td> <input type="checkbox" value="Photography"  id="checkbox0" onclick="clickedCheckbox(0)">Photography</td>
+				<td> <input type="checkbox" value="Entertainment" id="checkbox1" onclick="clickedCheckbox(1)">Entertainment</td>
+				<td> <input type="checkbox" value="Shopping" id="checkbox2" onclick="clickedCheckbox(2)">Shopping</td>
+				<td> <input type="checkbox" value="Cooking" id="checkbox3" onclick="clickedCheckbox(3)">Cooking</td>
+				<td> <input type="checkbox" value="Travelling" id="checkbox4" onclick="clickedCheckbox(4)">Travelling</td>
+				</tr>
+			</table>
+			
+			
+			<script>
+			var checkedArray=[];
+				function clickedCheckbox(index){					
+					
+					/*for(var i=0;i<checkedValue.length;i++){
+						if(checkedValue[i].checked===true){
+							checkedArray=checkedValue[i].value;
+							console.log(checkedArray +",");
+							 
+						}*/
+						
+						
+					var count=0;
+					for(var i=0;i<checkedArray.length;i++){
+						if(checkedArray[i] === document.getElementById("checkbox"+index).value){
+							checkedArray.splice(i,1);
+							count=1;
+							break;
+						 }
+						}
+						
+						
+					if(count === 0){
+						checkedArray.push(document.getElementById("checkbox"+index).value);
+						
+					}
+					alert(checkedArray);
+					
+					}
+		
+	            
+			
+			
+			</script>
+			</body>	
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			

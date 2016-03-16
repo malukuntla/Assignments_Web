@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+     <head>
+         <title>quiz form
+         </title>
+		 <meta name="viewport" content="width=device-width,initial-scale=1.0">
+		  <!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="quiz.css">
+		
+		<!--<script type="javascript" src="quiz.js" /> -->
+	
+		<script type="javascript" src="" />
+
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+     </head>
+     <body>
+	 
+	<input type="submit" value="startQuiz" id="startQuiz" onclick="callQuestion()" />
+         
+        <div id="main" class="container two">
+           <div class="row">
+			    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-12">
+                    Question: 
+				    <div class="col-xs-12 question" id="qtn">				</div>
+                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-12">
+                      <table class="container">
+				      <tr>
+					      <td>
+				             1.<input type="submit" value="option" class="btn btn-warning" id="1" onclick="callQuestion(1)"><br><br>
+						  </td>
+						  <td>
+					         2.<input type="submit" value="option" class="btn btn-primary" id="2" onclick="callQuestion(2)"><br><br>
+						  </td>
+					  </tr>
+					  <tr>
+					      <td>
+				              3.<input type="submit" value="option" class="btn btn-success" id="3" onclick="callQuestion(3)"><br><br>
+						  </td>
+						  <td>
+				             4.<input type="submit" value="option" class="btn btn-info" id="4" onclick="callQuestion(4)"  ><br><br>
+						  </td>
+                        </tr>
+                </table>
+				</div>
+               </div>
+			</div>
+			</div>
+         
+            <div  id="result" class="container">
+                <p id="correct" style="color:green"></p>
+                <p id="wrong" style="color:red"></p>
+                <p id="qutn" style="color:blue"></p>
+           </div>
+            
+            <script type="text/javascript" src="quiz_with_question_randomization.js"></script>			
+     </body>
+</html>

@@ -1,0 +1,38 @@
+Javascript Part of Quiz Application:
+========================================
+	Requirements:
+	-------------
+	Each User should get random questions.
+	For every Question answered correctly, 20 points will be awarded.Otherwise,0 points.
+	At the end of quiz, the result should be displayed.
+	
+	Flow:-
+	------
+	When the user of quiz application selects a topic of own interest,he is navigated to the instructions HTML page.
+    On clicking the Continue button,the first Question appears on the screen .
+	User selects the answer.
+	Either answered correct or not,he will be navigated to the next question. The process repeats until the number of questions count (in this case,we limited it to 5 question) reaches the end.
+
+	
+	Internals:-
+	----------
+	On clicking the Continue button,it calls the Quiz.html. In Quiz.html,the Javascript file gets loaded(as it is defined in Quiz.html) generating a random array based on which the user experiences the questions. 
+	On displaying the question, user selects an answer. This user action calls the checkAnswer method defined in the JS File. It checks whether the answer is correct or not by comparing his answer with correct answer. If he is correct, he scores 20 points for every one. Otherwise,his score will be considered as 0 for that particular question. The counter variables are used to count the correct and wrong answers. 
+	As the user the end of quiz,his performance will be displayed on the screen stating Number of correct answers,Number of wrong answers and the Overall points scored.
+	
+	JS outlook:
+	---------
+	Variables used: 
+		myObjects --> An array of questions,options and answer.
+		currentQuestion --> To Know the Question currently user have acess.
+		randomArray ---> To store generated random number (Question  to be displayed ).
+		points --> To store Points scored
+		crctans  ---> To count the number of questions answered correctly.
+		wrngans  ---> To count the number of questions answered wrongly.
+		randomNum --> The actual function generated value.
+	Methods used:
+	   callQuestion()
+	   checkAnswer()
+	   
+	   
+		

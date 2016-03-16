@@ -1,0 +1,19 @@
+.container{
+    background-color:#f8e2d5;
+}
+h3{
+    color:#E5E1D1;
+}
+
+#aboutText{
+    text-align:center;    
+}
+#aboutName{
+    font-size:20px;
+}
+div img{
+    height:175px;
+    width:175px;
+    border:1px solid green;
+    align:center;
+}

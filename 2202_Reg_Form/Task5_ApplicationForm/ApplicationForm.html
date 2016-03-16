@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register Here.</title>
+	<link rel="stylesheet" href="ApplicationForm_CSS.css">
+	
+	
+</head>
+
+<body >
+	<!--creating a Bootstrap Container for whole registration form -->
+
+		
+		<!-- Header -->
+		<div id="header" >
+		
+			<img src="http://img.naukimg.com/logo_images/v2/2342682.gif" alt="Tradeleaves"  />	
+			<span> Tradeleaves India Private Limited,Hyderabad</span>	<br/>
+			
+			
+		</div>		
+		
+		<!-- Form  -->
+		<div>
+			<h1> Application Form </h1>					
+		
+			<fieldset>
+			<legend><strong>Personal Information</strong></legend>
+			
+			<table>			
+				<tr>
+				<td>First name    </td> <td> <input type="text" placeholder="First name" class="name" onfocus="checkFilled(0)" onblur="checkBlur(0)" required/></td>				
+				</tr>
+				<tr>
+				<td>Last name    </td> <td> <input type="text" placeholder="Last name"  class="name" onfocus="checkFilled(1)" onblur="checkBlur(1)"  required/></td>
+				</tr>
+				
+				<tr>
+				<td>Gender   </td> 
+				<td> <input type="radio" name="gender" value="male" checked> Male
+				<input type="radio" name="gender" value="female"> Female
+				<input type="radio" name="gender" value="other"> Other   </td>
+				</tr>
+				
+				<tr>
+				<td>Email</td>
+				<td> <input type="text" placeholder="Enter valid mail ID" id="enteredMail"  required/> </td>	
+				</tr>
+				
+				<tr>
+				<td>Confirm Email</td>
+				<td> <input type="text" placeholder="Re-enter the mail ID" id="reenteredMail"  onblur="checkMail()" required/> </td>	
+				</tr>	
+				
+				<tr>
+					<td>Password </td>
+					<td><input type="password"   placeholder="Choose a Password" id="pwd" required/> </td>
+				
+				</tr>
+				<tr>
+					<td>Confirm Password </td>
+					<td><input type="password" placeholder="Re-enter your password" id="reenteredPwd" onblur="checkPassword()" required/> </td>				
+				</tr>			
+			
+			</table>			
+			</fieldset>			
+			<hr />			
+		</div>
+		
+		<div>		
+			<fieldset>
+				<legend><strong>Qualification Details</strong></legend>
+			<table>
+				<tr>
+				<td>		
+					<select name="levelOfEducation" >
+						<option value="X"> Matriculation </option>
+						<option value="10+">Intermediate</option>
+						<option value="Grad">Graduation</option>
+							<option value="P.G">P.Graduation</option>
+					</select>
+				<td>
+					<select name="authority" >
+						<option value="X"> CBSE </option>
+						<option value="10+">ICSE</option>
+						<option value="Grad">State Board</option>				
+					</select>
+				</td>	
+				<td>
+					<select name="state" >
+						<option value="ap"> Andhra Pradesh</option>
+						<option value="t">Telangana</option>
+						<option value="tn">Tamilnadu</option>	
+						<option value="mh">Maharastra</option>	
+						<option value="k">Karnataka</option>	
+							
+					</select>
+				</td>	
+				<td>
+					<select name="" >
+						<option value=""> CBSE </option>
+						<option value="10+">ICSE</option>
+						<option value="Grad">State Board</option>				
+					</select>
+				</td>	
+				
+				</tr>				
+			</table>
+			</fieldset>
+		</div>
+		<hr/>
+		
+		
+		<div>
+		<fieldset><legend><strong>Interests</strong></legend>
+			<table>
+				<tr>
+				<td> <input type="checkbox" >Photography</td>
+				<td> <input type="checkbox" >Entertainment</td>
+				<td> <input type="checkbox" >Shopping</td>
+				<td> <input type="checkbox" >Cooking</td>
+				<td> <input type="checkbox" >Travelling</td>
+				</tr>
+			</table>
+		</fieldset>
+			
+		</div>
+		<br/>
+	
+		
+		<div style="text-align:center;">
+			<input type="submit" value="Register" />
+			<input type="Reset" value="Reset" />
+		</div>
+		
+		<!-- JavaScript -->
+		<script>
+		function checkFilled(index) {
+			var inputVal = document.getElementsByClassName("name")[index];
+			
+			if (inputVal.value == "") {
+				inputVal.style.backgroundColor = "yellow";
+			}
+			else{
+				inputVal.style.backgroundColor = "";
+			}	
+		}
+		function checkBlur(index) {
+			var inputVal = document.getElementsByClassName("name")[index];
+			if (inputVal.value == "") {
+				inputVal.style.backgroundColor = "";
+			}
+			else{
+				inputVal.style.backgroundColor = "yellow";
+			}	
+		}
+		
+		
+		function checkMail(){
+		
+			var mail=document.getElementById("enteredMail").value;
+			var reenterMail=document.getElementById("reenteredMail").value;
+			
+			if(mail !== reenterMail ){
+				confirm("Please Check your mailIds");
+			}
+		
+		}
+		
+		function checkPassword(){
+			var pwd=document.getElementById("pwd").value;
+			var reenterPwd=document.getElementById("reenteredPwd").value;
+			if(pwd !== reenterPwd){
+				confirm("Passwords didn't match.Please check them.");
+			}
+		
+		}
+		</script>
+</body>
+</html>

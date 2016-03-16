@@ -1,0 +1,13 @@
+.question {
+	background-color:#FAD0B8;
+	border: 1px solid black;
+	
+	padding-top:50px;
+}
+.two{
+	background-color:#C07C74;
+	padding-top:50px;
+}
+input[type=submit] {
+    width: 20em;  height: 2em;
+}

@@ -1,0 +1,50 @@
+body{
+ margin:10px 550px 10px 550px;
+}
+#header{	
+	height:100px;	
+}
+img{
+	height:80px;
+	width:100px;
+	border:1px solid green;
+	margin:9px 0px 0px 9px
+}
+
+div h1{
+	color:blue;	
+	text-align:center;	
+	border:1px solid green;
+}
+
+table{
+	
+	margin:0 auto;
+	border-spacing: 8px ;
+	
+}
+input[type=text], [type=password]{
+	width:300px;
+}
+
+
+strong{
+	font-size:20px;
+}
+/*
+.option{
+	display:none;
+}*/
+
+#info1,#info2{
+	color:red;
+}
+
+#authority,#authorityPg,#authorityGrad,#state,#branch{
+	display:none;
+}
+
+hr{
+ border:2px solid lightblue;
+ width: 75%;
+}

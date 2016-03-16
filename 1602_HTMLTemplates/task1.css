@@ -1,0 +1,31 @@
+		div{
+			border:1px solid black;
+		  }
+		  
+		  #header{
+		        height:100px;
+		        margin:10px;
+		  
+		  }
+		  
+		  .div_blocks{
+				float:left;
+				margin:10px;
+				height:630px;
+				width:600px;
+				padding:10px 3px 10px 3px;
+				
+		  
+		  }
+		  
+		  
+		  #footer{
+			margin:10px;
+			height:100px;
+			
+			clear:both;	
+		  
+		  }   
+		  p{
+		   text-align:center;
+		  }

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register Here.</title>
+	<link rel="stylesheet" href="ApplicationForm_CSS_Expt.css">
+	
+	
+</head>
+
+<body >
+	<!--creating a Bootstrap Container for whole registration form -->
+
+		
+		<!-- Header -->
+		<div id="header" >
+		
+			<img src="http://img.naukimg.com/logo_images/v2/2342682.gif" alt="Tradeleaves"  />	
+			<span> Tradeleaves India Private Limited,Hyderabad</span>	<br/>
+			
+			
+		</div>		
+		
+		<!-- Form  -->
+		<div>
+			<h1> Application Form </h1>					
+		
+			<fieldset>
+			<legend><strong>Personal Information</strong></legend>
+			
+			<table>			
+				<tr>
+				<td>First name    </td> <td> <input type="text" placeholder="First name" class="name" id="fname" onfocus="checkFilled(0)" onblur="checkBlur(0)" title="Please enter the first name" required/></td></td>
+				</tr>
+				<tr>
+				<td></td>
+				<td id="info1"> </td>
+				</tr>
+				<tr>
+				<td>Last name    </td> <td> <input type="text" placeholder="Last name"  class="name" id="lname" onfocus="checkFilled(1)" onblur="checkBlur(1)" title="Please enter the last name"  required/></td>
+				</tr>
+				<tr>
+				<td></td>
+				<td id="info2"> </td>
+				</tr>
+				
+				<tr></tr>
+				<tr>
+				<td>Gender   </td> 
+				<td> <input type="radio" name="gender" value="male" checked> Male
+				<input type="radio" name="gender" value="female"> Female
+				<input type="radio" name="gender" value="other"> Other   </td>
+				</tr>
+				<tr></tr>
+				
+				<tr>
+				<td>Email</td>
+				<td> <input type="text" placeholder="Enter valid mail ID" id="enteredMail"  title="Please enter your mail "  required/> </td>	
+				</tr>
+				<tr></tr>
+				
+				<tr>
+				<td>Confirm Email</td>
+				<td> <input type="text" placeholder="Re-enter the mail ID" id="reenteredMail"  title="Please re-enter your mail " onblur="checkMail()" required/> </td>	
+				</tr>
+				<tr></tr>		
+				
+				<tr>
+					<td>Password </td>
+					<td><input type="password"   placeholder="Choose a Password" id="pwd" title="Please enter alphanumreic password " required/> </td>
+				
+				</tr>
+				<tr></tr>
+				<tr>
+					<td>Confirm Password </td>
+					<td><input type="password" placeholder="Re-enter your password" id="reenteredPwd" title="Reenter the password" onblur="checkPassword()" required/> </td>				
+				</tr>	
+				<tr></tr>		
+			
+			</table>			
+			</fieldset>			
+			<hr />			
+		</div>
+		
+		<div>		
+			<fieldset>
+				<legend><strong>Qualification Details</strong></legend>
+			<table>
+				<tr>
+				<td>		
+					<select name="levelOfEducation" id="levelOfEducation" onchange="setAuthority()">
+						<option value=""> --Select-- </option>
+						<option value="X"> Matriculation </option>
+						<option value="10+">Intermediate</option>
+						<option value="Grad">Graduation</option>
+							<option value="P.G">P.Graduation</option>
+					</select>
+				<td>
+					<select name="authority" id="authority"  class="option" onchange="setState()" onmouseout="setState()">
+						<option value=""> --Select-- </option>
+						<option value="cbse"> CBSE </option>
+						<option value="icse">ICSE</option>
+						<option value="sb">State Board</option>				
+					</select>
+				</td>	
+				<td>
+					<select name="authorityGrad" id="authorityGrad"  class="option" onchange="setState()" onmouseout="setState()">						
+						<option value=""> --Select-- </option>
+						<option value="be"> B.E/B.Tech </option>
+						<option value="bsc">B.Sc</option>
+						<option value="bcom">B.com</option>	
+						
+					</select>
+				</td>
+				<td>
+					<select name="authorityPg" id="authorityPg" class="option" onchange="setState()"  onmouseout="setState()">						
+						<option value=""> --Select-- </option>
+						<option value="me"> M.E/M.Tech </option>
+						<option value="msc">M.Sc</option>
+						<option value="mcom">M.com</option>	
+						
+					</select>
+				</td>				
+				<td>
+					<select name="state" id="state"  class="option" onchange="setBranch()" onmouseout="setBranch()">
+						<option value="none"> --Select State-- </option>
+						<option value="ap"> Andhra Pradesh</option>
+						<option value="t">Telangana</option>
+						<option value="tn">Tamilnadu</option>	
+						<option value="mh">Maharastra</option>	
+						<option value="k">Karnataka</option>	
+							
+					</select>
+				</td>	
+				<td>
+					<select name="branch" id="branch"  class="option">
+						<option value="none"> --Select Branch-- </option>
+						<option value=""> ECE</option>
+						<option value="">EEE</option>
+						<option value="">CSc</option>	
+						<option value="">IT</option>
+						<option value="">Physics</option>
+						<option value="">Chemistry</option>
+						<option value="">Economics</option>
+						<option value="">Statistics</option>
+						<option value="">Others</option>		
+								
+					</select>
+				</td>	
+				</tr>				
+			</table>
+			</fieldset>
+		</div>
+		<hr/>
+		
+		
+		<div>
+		<fieldset><legend><strong>Interests</strong></legend>
+			<table >
+				<tr>
+				<td> <input type="checkbox" value="Photography"  class="checkbox" onclick="clickedCheckbox()">Photography</td>
+				<td> <input type="checkbox" value="Entertainment" class="checkbox" onclick="clickedCheckbox()">Entertainment</td>
+				<td> <input type="checkbox" value="Shopping" class="checkbox" onclick="clickedCheckbox()">Shopping</td>
+				<td> <input type="checkbox" value="Cooking" class="checkbox" onclick="clickedCheckbox()">Cooking</td>
+				<td> <input type="checkbox" value="Travelling" class="checkbox" onclick="clickedCheckbox()">Travelling</td>
+				</tr>
+				<!--<tr id="infoList"></tr>-->
+			</table>
+			
+			<p>Your Interests are : <span id="list"></span></p>
+		</fieldset>
+			
+		</div>
+		<br/>
+	
+		<!-- Button -->
+		<div style="text-align:center;">
+			<input type="submit" value="Register" />
+			<input type="Reset" value="Reset" />
+		</div>
+		
+		
+		<!-- JavaScript -->
+		<script>
+		<!-- To save checked checkboxes in js -->	
+		function clickedCheckbox(){
+				var checkedValue=document.getElementsByClassName("checkbox");
+				/*if(checkedValue === ""){
+					document.getElementById().innerHTML="Please select your Interests";
+				}*/
+				var checkedArray=[];
+					
+					for(var i=0;i<checkedValue.length;i++){
+						if(checkedValue[i].checked===true){
+							//checkedArray=checkedValue[i].value;
+							
+							checkedArray.push(checkedValue[i].value);
+							document.getElementById("list").innerHTML = checkedArray;
+							 //console.log(checkedArray);
+						}
+					}
+		}
+		
+	     
+		
+		function setBranch(){
+		var branch=document.getElementById("state").value;
+		var levelOfEducation=document.getElementById("levelOfEducation").value;
+		document.getElementById("branch").style.display="none";
+		if(!(levelOfEducation === "X" || levelOfEducation === "10+" )){
+		switch(branch){
+			case "ap":
+				document.getElementById("branch").style.display="block";
+				break;
+			case "t":
+				document.getElementById("branch").style.display="block";
+				break;
+			case "tn":
+				document.getElementById("branch").style.display="block";
+				break;
+			case "up":
+				document.getElementById("branch").style.display="block";
+				break;
+			case "mh":
+				document.getElementById("branch").style.display="block";
+				break;
+			case "k":
+				document.getElementById("branch").style.display="block";
+				break;
+			default:
+				document.getElementById("branch").style.display="none";
+			}
+		}
+		
+		}
+		
+		function setState(){
+		var state=document.getElementById("authority").value;
+		switch(state){	 
+			case "cbse":
+				document.getElementById("state").style.display="block";
+				break;
+			case "icse":
+				document.getElementById("state").style.display="block";
+				break;
+			case "sb":
+				document.getElementById("state").style.display="block";
+				break;
+			default:
+				document.getElementById("state").style.display="none";
+			}
+		if(state===""){
+		var state1=document.getElementById("authorityGrad").value;
+		switch(state1){
+			case "be":
+				document.getElementById("state").style.display="block";
+				break;
+			case "bsc":
+				document.getElementById("state").style.display="block";
+				break;
+			case "bcom":
+				document.getElementById("state").style.display="block";
+				break;	
+			default:
+				document.getElementById("state").style.display="none";
+			}
+		}
+		else if(state==="" && state1===""){
+		var state2=document.getElementById("authorityPg").value;
+			
+			switch(state2){				
+			case "me":
+				document.getElementById("state").style.display="block";
+				break;
+			case "msc":
+				document.getElementById("state").style.display="block";
+				break;
+			case "mcom":
+				document.getElementById("state").style.display="block";
+				break;
+			default:
+				document.getElementById("state").style.display="none";
+			}
+			}
+			
+	 
+	 
+		/*if(state === "cbse" || state === "icse" || state === "sb"){
+			document.getElementById("state").disabled=false;
+		}
+		else{
+		document.getElementById("state").disabled=true;
+		}
+		
+		if(state === "be" || state === "bsc" || state === "bcom"){
+		
+			document.getElementById("state").disabled=false;
+		}
+		else{
+		document.getElementById("state").disabled=true;
+		}
+		if(state === "me" || state === "msc" || state === "mcom"){
+			document.getElementById("state").disabled=false;
+		}
+		else{
+		document.getElementById("state").disabled=true;
+		}	*/	
+	}
+
+		
+		
+		function setAuthority(){	
+	
+			var levelOfEducation=document.getElementById("levelOfEducation").value;
+			
+			switch(levelOfEducation){
+				case "X":				
+					document.getElementById("authority").style.display="block";
+					document.getElementById("authorityGrad").style.display="none";
+					document.getElementById("authorityPg").style.display="none";
+					document.getElementById("state").style.display="none";
+					document.getElementById("branch").style.display="none";
+					break;
+				 case "10+":
+					document.getElementById("authority").style.display="block";
+					document.getElementById("authorityGrad").style.display="none";
+					document.getElementById("authorityPg").style.display="none";
+					document.getElementById("state").style.display="none";
+					document.getElementById("branch").style.display="none";
+					break;
+				 case "Grad":
+					document.getElementById("authority").style.display="none";
+					document.getElementById("authorityGrad").style.display="block";
+					document.getElementById("authorityPg").style.display="none";
+					document.getElementById("state").style.display="none";
+					document.getElementById("branch").style.display="none";
+					break;
+				 case "P.G":
+					document.getElementById("authority").style.display="none";
+					document.getElementById("authorityGrad").style.display="none";
+					document.getElementById("authorityPg").style.display="block";
+					document.getElementById("state").style.display="none";
+					document.getElementById("branch").style.display="none";
+					
+					break;
+				 default:
+					document.getElementById("authority").style.display="none";
+					document.getElementById("authorityGrad").style.display="none";
+					document.getElementById("authorityPg").style.display="none";
+					document.getElementById("state").style.display="none";
+					document.getElementById("branch").style.display="none";
+			}
+			
+			
+			/*if(levelOfEducation === "X"){
+			  document.getElementById("authority").disabled=false;
+			}
+			else if(levelOfEducation === "10+"){			
+			 document.getElementById("authority").disabled=false;
+			  document.getElementById("authorityGrad").disabled=true;
+			}
+			else if(levelOfEducation === "Grad"){
+			 document.getElementById("authorityGrad").disabled=false;
+			 document.getElementById("authority").disabled=true;
+			}
+			else if(levelOfEducation === "P.G"){
+			 
+			 document.getElementById("authorityPg").disabled=false;
+				 document.getElementById("authorityGrad").disabled=true;
+				 document.getElementById("authority").disabled=true;
+			}*/
+		}
+		
+		
+		function checkFilled(index) {
+			var inputVal = document.getElementsByClassName("name")[index];
+			
+			if (inputVal.value == "") {
+				inputVal.style.backgroundColor = "yellow";
+				
+			}
+			else{
+				inputVal.style.backgroundColor = "";
+			}	
+		}
+		function checkBlur(index) {
+			var inputVal = document.getElementsByClassName("name")[index];
+			if (inputVal.value == "") {
+				inputVal.style.backgroundColor = "";
+				if(index==0){
+					document.getElementById("info1").innerHTML="Please Enter Your First Name";
+				}
+				if(index===1){
+					document.getElementById("info2").innerHTML="Please Enter Your Last Name";
+				}
+			}
+			else{
+				inputVal.style.backgroundColor = "yellow";
+				document.getElementById("info1").innerHTML="";	
+				document.getElementById("info2").innerHTML="";	
+			}
+		}
+		
+		
+		function checkMail(){
+		
+			var mail=document.getElementById("enteredMail").value;
+				
+			var reenterMail=document.getElementById("reenteredMail").value;
+		
+			
+			
+			if(mail !== reenterMail ){
+				confirm("Please Check your mail IDs.Both Mail IDs should match.");
+			}
+		
+		}
+		
+		function checkPassword(){
+			var pwd=document.getElementById("pwd").value;
+			var reenterPwd=document.getElementById("reenteredPwd").value;
+			if(pwd !== reenterPwd){
+				confirm("Passwords didn't match.Please check them.");
+			}
+		
+		}
+		</script>
+</body>
+</html>
